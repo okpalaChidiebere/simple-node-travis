@@ -8,6 +8,9 @@ WORKDIR /usr/src/app
 # package.json and package-lock.json
 COPY package*.json ./
 
+ARG FAVORITE_FOOD
+ENV FAVORITE_FOOD=$FAVORITE_FOOD
+
 # Install dependencies
 RUN npm install
 
