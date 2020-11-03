@@ -17,7 +17,7 @@ async function main() {
 
 main();
 
-app.listen(80, () => {
+app.listen(8080, () => {
   console.log("Server running on port 8080");
 });
 
