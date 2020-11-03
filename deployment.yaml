@@ -19,3 +19,9 @@ spec:
         image: aluminetchidiebre/simple-node-travis
         ports:
         - containerPort: 80
+        livenessProbe:
+            httpGet:
+              path: /health
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 3
