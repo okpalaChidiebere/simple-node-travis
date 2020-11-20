@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node-travis --build-arg FAVORITE_FOOD=$FAVORITE_FOOD .
+  - docker build -t simple-node-travis .  # --build-arg FAVORITE_FOOD=$FAVORITE_FOOD i will add this if a need them during the build. Initally i baked the variable in. That is bad practise. I can pass the en variable during ducker run for the container to use and my image can use them in code
   - docker tag simple-node-travis aluminetchidiebre/simple-node-travis:latest
   - echo $FAVORITE_FOOD
 

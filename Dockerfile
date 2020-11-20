@@ -8,8 +8,9 @@ WORKDIR /usr/src/app
 # package.json and package-lock.json
 COPY package*.json ./
 
-ARG FAVORITE_FOOD
-ENV FAVORITE_FOOD=$FAVORITE_FOOD
+#i will use this if i need a variable during build time for the image
+#ARG FAVORITE_FOOD
+#ENV FAVORITE_FOOD=$FAVORITE_FOOD
 
 # Install dependencies
 RUN npm install
