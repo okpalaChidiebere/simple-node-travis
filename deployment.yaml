@@ -25,3 +25,6 @@ spec:
               port: 8080
             initialDelaySeconds: 3
             periodSeconds: 3
+        env:
+        - name: FAVORITE_FOOD  # or you can specify them in a k8s ConfigMap when you have many any you want to have them referenced in to many pods in thesame cluster
+          value: "ogbono"
